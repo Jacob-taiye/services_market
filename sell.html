@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Service Market — Customer</title>
+  <link rel="stylesheet" href="sells.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Service Market</h1>
+        <button id="openAdmin" class="btn small">Admin</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Available services</h2>
+        <p class="muted">Click a service to view available accounts.</p>
+        <div id="servicesGrid" class="grid"></div>
+      </section>
+    </main>
+
+    <footer class="container footer muted">© Service Market — Frontend prototype</footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle"></h3>
+        <button id="closeModal" class="btn ghost">Close</button>
+      </div>
+      <p id="modalSub" class="muted small"></p>
+
+      <ul id="acctList" class="acct-list"></ul>
+
+      <div class="modal-actions">
+        <button id="makePayment" class="btn">Make Payment</button>
+        <button id="paidBtn" class="btn" style="display:none">I've Paid</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="sells.js"></script>
+  <script>
+    // customer-only wiring
+    document.getElementById('openAdmin').addEventListener('click', ()=>{
+      // open admin.html in new tab (admin login handled there)
+      window.open('sells_admin.html','_blank');
+    });
+  </script>
+</body>
+</html>
+
+
+

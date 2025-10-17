@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Service Market — Admin</title>
+  <link rel="stylesheet" href="sells.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="brand">Admin — Service Market</h1>
+        <button id="closeAdmin" class="btn small ghost">Close</button>
+      </div>
+    </header>
+
+    <main class="container admin-grid">
+      <section class="card">
+        <h2>Manage services</h2>
+        <label>Service name</label>
+        <input id="svcName" placeholder="e.g. Instagram Followers" />
+        <label>Price (₦)</label>
+        <input id="svcPrice" type="number" placeholder="e.g. 1200" />
+        <label>Accounts (comma-separated). Each item should be a social link (https://...)</label>
+        <textarea id="svcAccounts" placeholder="https://instagram.com/acc1, https://instagram.com/acc2"></textarea>
+        <div class="row right">
+          <button id="addSvc" class="btn">Add service</button>
+        </div>
+
+        <hr />
+        <h4>Existing services</h4>
+        <div id="adminServicesList"></div>
+      </section>
+
+      <aside class="card">
+        <h2>Payment & contact</h2>
+        <label>Payment info (shown after pressing Make Payment)</label>
+        <textarea id="paymentInfo" placeholder="e.g. Bank: Zenith\nAcct name: John Doe\nAcct no: 1234567890"></textarea>
+
+        <label>WhatsApp DM link (https://wa.me/234...)</label>
+        <input id="waLink" placeholder="https://wa.me/234801234..." />
+
+        <div class="row">
+          <button id="saveContact" class="btn">Save</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="container footer muted">Admin prototype — Data stored in browser localStorage. Password: <code>admin123</code></footer>
+  </div>
+
+  <script src="sells.js"></script>
+  <script>
+    // admin login (simple prompt for prototype)
+    (function(){
+      const pw = prompt('Enter admin password');
+      if(pw !== 'admin123'){
+        alert('Wrong password — closing');
+        window.close();
+      }
+    })();
+
+    // wire close button
+    document.getElementById('closeAdmin').addEventListener('click', ()=> window.close());
+  </script>
+</body>
+</html>
