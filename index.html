@@ -1,60 +1,178 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Service Market — Customer</title>
-  <link rel="stylesheet" href="sells.css">
+  <title>Mub Log Marketplace</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="brand">Service Market</h1>
-        <button id="openAdmin" class="btn small">Admin</button>
+  <!-- HERO / Intro -->
+  <header class="hero" id="intro">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-title">Mub Log Marketplace</h1>
+        <p class="hero-lead">Fast, secure & verified social accounts — all in one place.</p>
+        <p class="hero-sub muted">High-quality accounts, verified numbers, and safe VPNs for your business needs.</p>
+        <a class="btn btn-yellow" href="sell.html">Get Started</a>
       </div>
-    </header>
 
-    <main class="container">
-      <section class="card">
-        <h2>Available services</h2>
-        <p class="muted">Click a service to view available accounts.</p>
-        <div id="servicesGrid" class="grid"></div>
-      </section>
-    </main>
-
-    <footer class="container footer muted">© Service Market — Frontend prototype</footer>
-  </div>
-
-  <!-- Modal -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modalTitle"></h3>
-        <button id="closeModal" class="btn ghost">Close</button>
-      </div>
-      <p id="modalSub" class="muted small"></p>
-
-      <ul id="acctList" class="acct-list"></ul>
-
-      <div class="modal-actions">
-        <button id="makePayment" class="btn">Make Payment</button>
-        <button id="paidBtn" class="btn" style="display:none">I've Paid</button>
+      <div class="hero-media">
+        <!-- free stock image from Unsplash -->
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=3300f8b66e9e8b0f4f3cc6ec9b6a8d7a"
+             alt="People using phones" loading="lazy">
       </div>
     </div>
-  </div>
+    <a class="scroll-down" href="#services" aria-label="Scroll to services">↓</a>
+  </header>
 
-  <script src="sells.js"></script>
-  <script>
-    // customer-only wiring
-    document.getElementById('openAdmin').addEventListener('click', ()=>{
-      // open admin.html in new tab (admin login handled there)
-      window.open('sells_admin.html','_blank');
-    });
-  </script>
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub muted">Choose from verified accounts and verification services across platforms.</p>
+
+      <div class="service-grid">
+        <!-- card 1 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/facebook.jpg"
+                 alt="Facebook example" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Facebook Account</h3>
+            <p>Ready-to-use Facebook accounts — verified and active.</p>
+          </div>
+        </article>
+
+        <!-- card 2 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/instagram.jpg"
+                 alt="Instagram example" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Instagram Account</h3>
+            <p>High-quality Instagram accounts with posts and followers to match your niche.</p>
+          </div>
+        </article>
+
+        <!-- card 3 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/twitter.jpg"
+                 alt="Twitter example" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Twitter Account Number</h3>
+            <p>Verified handles and number-backed accounts ready for marketing and reach.</p>
+          </div>
+        </article>
+
+        <!-- card 4 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/whatsapp.jpg"
+                 alt="WhatsApp and Signal" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>WhatsApp & Signal Numbers</h3>
+            <p>SIM-backed numbers for WhatsApp and Signal verification and use.</p>
+          </div>
+        </article>
+
+        <!-- card 5 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/verified phone no.jpg"
+                 alt="International verification" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>All-Country Number Verifications</h3>
+            <p>International verification services across many countries and platforms.</p>
+          </div>
+        </article>
+
+        <!-- card 6 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0b4c9f6d926a3f4a6b7c8d9e0f1a2b3c"
+                 alt="POF verification" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>POF & Other Site Verifications</h3>
+            <p>Profiles verified for POF and other classifieds/dating or marketplace sites.</p>
+          </div>
+        </article>
+
+        <!-- card 7 -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/VPN.jpg"
+                 alt="VPN" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Fast & Secure VPN</h3>
+            <p>VPN options to secure logins and maintain geo-flexibility for verifications.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES US SPECIAL -->
+  <section id="special" class="section special">
+    <div class="container">
+      <h2 class="section-title">What Makes Us Special</h2>
+      <p class="section-sub muted">Why clients choose Mub Log Marketplace</p>
+
+      <div class="special-grid">
+        <div class="special-card reveal">
+          <img src="images/fast.jpg" alt="Fast deliver" loading="lazy">
+          <h4>Fast Delivery</h4>
+          <p>Quick turnaround so you get accounts and verification fast.</p>
+        </div>
+
+        <div class="special-card reveal">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef1234567890abcdef1234567890" alt="Secure" loading="lazy">
+          <h4>Verified & Secure</h4>
+          <p>Accounts are verified and checked for safety before delivery.</p>
+        </div>
+
+        <div class="special-card reveal">
+          <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1234567890abcdef1234567890abcdef" alt="Global access" loading="lazy">
+          <h4>Global Access</h4>
+          <p>Support for verifications and accounts across many countries.</p>
+        </div>
+
+        <div class="special-card reveal">
+          <img src="images/24.jpg" alt="Support" loading="lazy">
+          <h4>24/7 Support</h4>
+          <p>Customer support ready to help you through setup and delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / GET READY -->
+  <section id="cta" class="section cta">
+    <div class="container cta-inner reveal">
+      <div class="cta-text">
+        <h2>Ready to get verified?</h2>
+        <p class="muted">Start now with Mub Log Marketplace — secure accounts & verifications at your fingertips.</p>
+      </div>
+      <div>
+        <a class="btn btn-yellow" href="index.html">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Mub Log Marketplace</small>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
-
-
-
