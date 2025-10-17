@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Service Market — Admin</title>
+  <title>Mub Log Marketplace</title>
   <link rel="stylesheet" href="sells.css">
 </head>
 <body>
   <div class="wrap">
     <header class="site-header">
       <div class="container header-inner">
-        <h1 class="brand">Admin — Service Market</h1>
+        <h1 class="brand">Admin — Mub Log Marketplace</h1>
         <button id="closeAdmin" class="btn small ghost">Close</button>
       </div>
     </header>
@@ -56,7 +56,7 @@
     // admin login (simple prompt for prototype)
     (function(){
       const pw = prompt('Enter admin password');
-      if(pw !== 'admin123'){
+      if(pw !== 'MUBADMIN123LOG'){
         alert('Wrong password — closing');
         window.close();
       }
@@ -66,4 +66,5 @@
     document.getElementById('closeAdmin').addEventListener('click', ()=> window.close());
   </script>
 </body>
+
 </html>
